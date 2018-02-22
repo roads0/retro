@@ -44,7 +44,7 @@ composer.addPass(copyShader);
 
 var SIZE = 128
 
-var grids = [create_grid(0, 0xff00ff), create_grid(1, 0xff00ff)]
+var grids = [create_grid(0, COLORPRIMARY), create_grid(1, COLORPRIMARY)]
 
 camera.position.y = 1;
 camera.position.z = 5;
@@ -66,7 +66,7 @@ var animate = function() {
       grid.position.z = (grid.position.z + 0.05)
 
       if (!frustum.intersectsObject(grid)){
-        grids.push(create_grid(index+3, 0xff00ff))
+        grids.push(create_grid(index+3, COLORPRIMARY))
         scene.remove(grid)
         grids[index] = null
       };
